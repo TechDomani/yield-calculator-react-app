@@ -4,9 +4,15 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import React from 'react';
 import './YieldMap.css';
 
-function YieldMap() {
+interface YieldMapProps {
+   latitude: number,
+   longitude: number
+}
 
-    const position : LatLngExpression = [59.91174337077401, 10.750425582038146];
+function YieldMap({latitude, longitude}: YieldMapProps) {
+
+    //const position : LatLngExpression = [59.91174337077401, 10.750425582038146];
+    const position : LatLngExpression = [latitude, longitude];
     const zoom : number = 15;
 
     return (<MapContainer className="map-display" center={position} zoom={zoom} scrollWheelZoom={false}>
