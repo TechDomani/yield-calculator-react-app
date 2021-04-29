@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Map from './Map/Map'
+import YieldMap from './YieldMap/YieldMap'
 import axios from 'axios';
 
 function RentalYield() {
 
-    const [centerMap, setCenterMap] = useState<[number, number]>([51.505, -0.09]);
+    /* const [centerMap, setCenterMap] = useState<[number, number]>([51.505, -0.09]);
     const [postCode, setPostCode] = useState<string>('e112dz');
 
     useEffect(() => {
@@ -21,13 +21,13 @@ function RentalYield() {
                 console.log(err);
             })
     }, [postCode]
-    ); 
+    ); */
 
 
     return (
         <div className="d-flex flex-column align-items-center">
             <h1>I will show rental yield</h1>
-            <Map latitude={centerMap[0]} longitude={centerMap[1]}/>
+            <YieldMap />
         </div>
     );
 }
